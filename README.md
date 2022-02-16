@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: mkubrycz/gh-action-node-update-filtered-deps@master
+      - uses: DocPlanner/gh-action-node-update-filtered-deps@v2.1.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }} # NPM token to use when `npm-registry-*` configs are set

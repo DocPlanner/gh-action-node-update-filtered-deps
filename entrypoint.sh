@@ -13,10 +13,10 @@ BUMP_VERSION=${9} # bump-version
 NPM_SCOPE=${10} # npm-registry-scope
 NPM_REGISTRY=${11} # npm-registry-url
 PRE_COMMIT_SCRIPT=${12} # pre-commit-script
-SUBDIRECTORY=${13} # subdirectory
+WORKING_DIRECTORY=${13} # working-directory
 
-if [ -n "${SUBDIRECTORY}" ]; then
-  cd ${SUBDIRECTORY}
+if [ -n "${WORKING_DIRECTORY}" ]; then
+  cd ${WORKING_DIRECTORY}
 fi
 
 if [ -n "${NPM_SCOPE}" ] && [ -n "${NPM_REGISTRY}" ]; then

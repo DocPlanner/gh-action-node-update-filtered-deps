@@ -23,7 +23,7 @@ inputs:
   modules-filter:
     description: Include only packages matching the given string, wildcard, glob, comma-or-space-delimited list, or /regex/.
     required: false
-    default: '*'
+    default: "*"
   reviewers:
     description: A comma-separated list (no spaces around the comma) of GitHub handles to request a review from.
     required: false
@@ -45,9 +45,12 @@ inputs:
   npm-registry-url:
     description: NPM registry to used for scope defined in `npm-registry-scope`. Must start with https://.
     required: false
-    default: ''
+    default: ""
   pre-commit-script:
     description: A command to run before committing the dependency changes (e.g. npm run build).
+    required: false
+  subdirectory:
+    description: A path to subdirectory in which all the actions will run
     required: false
 runs:
   using: docker
@@ -65,3 +68,4 @@ runs:
     - ${{ inputs.npm-registry-scope }}
     - ${{ inputs.npm-registry-url }}
     - ${{ inputs.pre-commit-script }}
+    - ${{ inputs.subdirectory }}

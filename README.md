@@ -35,4 +35,5 @@ jobs:
           npm-registry-scope: "@thescope" # ignored if not all `npm-registry-*` configs are set
           npm-registry-url: "https://domain/pkgs" # ignored if not all `npm-registry-*` configs are set
           pre-commit-script: npm run build # defaults to not running anything
+          subdirectory: "subdir" # defaults to not changing the working directory (the directory where all the actions run)
 ```

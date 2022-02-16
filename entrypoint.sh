@@ -13,8 +13,11 @@ BUMP_VERSION=${9} # bump-version
 NPM_SCOPE=${10} # npm-registry-scope
 NPM_REGISTRY=${11} # npm-registry-url
 PRE_COMMIT_SCRIPT=${12} # pre-commit-script
+SUBDIRECTORY=${13} # subdirectory
 
-
+if [ -n "${SUBDIRECTORY}" ]; then
+  cd ${SUBDIRECTORY}
+fi
 
 if [ -n "${NPM_SCOPE}" ] && [ -n "${NPM_REGISTRY}" ]; then
   NPM_REGISTRY_PATH=${NPM_REGISTRY#https:}

@@ -49,8 +49,8 @@ inputs:
   pre-commit-script:
     description: A command to run before committing the dependency changes (e.g. npm run build).
     required: false
-  subdirectory:
-    description: A path to subdirectory in which all the actions will run
+  working-directory:
+    description: A path to working-directory in which all the actions will run
     required: false
 runs:
   using: docker
@@ -68,4 +68,4 @@ runs:
     - ${{ inputs.npm-registry-scope }}
     - ${{ inputs.npm-registry-url }}
     - ${{ inputs.pre-commit-script }}
-    - ${{ inputs.subdirectory }}
+    - ${{ inputs.working-directory }}
